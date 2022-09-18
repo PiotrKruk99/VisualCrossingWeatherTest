@@ -28,3 +28,7 @@ if (response.IsSuccessStatusCode)
 
     Console.WriteLine(output);
 }
+else
+{
+    Console.WriteLine("Error while sending request");
+}
