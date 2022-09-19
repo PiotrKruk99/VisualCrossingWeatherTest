@@ -44,12 +44,13 @@ while (goAnother)
 
     Console.WriteLine("Check another city? (y/n)");
     char choice;
+    char[] validChoice = { 'y', 'Y', 'n', 'N' };
 
     do
     {
         choice = Console.ReadKey(true).KeyChar;
     }
-    while (choice != 'Y' && choice != 'y' && choice != 'N' && choice != 'n');
+    while (!Array.Exists<char>(validChoice, x => x == choice));
 
     if (choice != 'Y' && choice != 'y')
         goAnother = false;
