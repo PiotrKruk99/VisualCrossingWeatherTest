@@ -52,6 +52,6 @@ while (goAnother)
     }
     while (!Array.Exists<char>(validChoice, x => x == choice));
 
-    if (choice != 'Y' && choice != 'y')
+    if (Char.ToUpper(choice) != 'Y')
         goAnother = false;
 }
